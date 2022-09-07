@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Env</title>
+    <style>
+		body{
+			text-align: center;
+		}
+        .body{
+            margin: 100px auto;
+            font-size: larger;
+			display:flex;
+			align-items: center;
+        }
+        .container {  
+            margin:0 auto;
+            display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        grid-template-rows: 1fr;
+                        gap: 0px 50px;
+                        grid-auto-flow: row;
+                        grid-template-areas:
+                            ". .";
+        }
+        img{
+            max-width: 800px;
+        }
+
+    </style>
+</head>
+<body>
+   <h1>Sudoku solver</h1>
+   <div class = "body">
+    <div class="container">
+        <h3>Original</h3>
+        <h4>Soltuion</h4>
+        <img src="{{ url_for('send_file', filename=original) }}" />
+        <img src="{{ url_for('send_file', filename=solution) }}" />
+    </div>
+   </div>
+   
+</body>
+</html>
